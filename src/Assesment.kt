@@ -6,6 +6,11 @@ intro("Audrey",19)
     distribute(20)
     var jina=names(arrayOf("Audrey","Jane","Dorcass","Ian"))
     println(jina)
+    var person=Human("Munyiva",19,98)
+    person.eat(8)
+    person.speak("I love coding")
+    person.birthday()
+
 }
 fun intro(name:String,age:Int){
 
@@ -47,18 +52,20 @@ fun names(names:Array<String>):Int{
     return counter
 
 }
-fun cars(cars:Array<String>):ArrayList<String>{
-    var gariArray= arrayOf("Mazda","Prado","Benz","Toyota","Tesla")
 
 
-
-}
-class Human(var name:String, var age:Int,var weight:Double){
-    fun  eat(foodWeight: Int){
-        var foodWeight=weight ++
-        println( "I am eating $foodWeight kgs of food")
+class Human(var name:String,var age:Int,var weight:Int){
+    fun eat(foodWeight:Int){
+        println("I am eating ${foodWeight} kgs of food")
+        var humanWeight=weight+foodWeight
     }
-
+    fun speak(speech:String){
+        println("I love coding")
+    }
+    fun birthday(){
+        var humanAge=age+1
+        println(humanAge)
+    }
 }
 
 
